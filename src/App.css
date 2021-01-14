@@ -1,0 +1,435 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+/* CODE FOR HIDING SCROLL BAR */
+body::-webkit-scrollbar{
+  display: none;
+}
+
+#pre-loader{
+  display: block;
+}
+
+#application{
+  display: none;
+}
+
+.body{
+  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(./static/background.jpg);
+  height:auto;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+footer{
+  min-height: 100vh;
+  height: auto;
+  margin-bottom: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.8),rgba(0,0,0,0.8));
+  border-top: 20vh solid black;
+  border-bottom: 20vh solid black;
+}
+
+.footer-content:hover{
+  color: white;
+  transition: 0.5s ease-in-out;
+  border-radius: 10%;
+  background-color: black;
+  cursor: grab;
+  padding: 100px;
+  border-radius: 100%;
+}
+
+/*                          STYLE FOR NavBar COMPONENT                             */
+
+nav{
+  background-image: linear-gradient(rgba(255,255,255,1),rgba(0,0,0,1));
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 2;
+  opacity: 0;
+}
+
+.header-content{
+  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(./static/Display1.jpg);
+  background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.header-content h1{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Nav__black{
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.95);
+  width: 100vw;
+}
+  
+.navbar-nav{
+  background-color: black;
+}
+
+#title{
+  font-family: cursive;
+}
+
+#neon{
+  margin: 15px;
+	position: relative;
+	display: inline-block;
+	padding: 5px 5px;
+	color: #2196f3;
+	letter-spacing: 4px;
+	text-decoration: none;
+	font-size: 15px;
+	overflow: hidden;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.active#neon{
+  color: #255784;
+	background: #2196f3;
+	box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition-delay: 0.1s;
+  font-size: 18px;
+  padding: 10px 7px;
+}
+
+#neon span{
+	position: absolute;
+	display: block;
+}
+
+#neon span:nth-child(1){
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #2196f3);
+}
+
+#neon:hover span:nth-child(1){
+	left: 100%;
+	transition: 0.7s;
+}
+
+#neon span:nth-child(3){
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, transparent, #2196f3);
+}
+
+#neon:hover span:nth-child(3){
+	right: 100%;
+	transition: 0.7s;
+	transition-delay: 0.1s;
+}
+
+#neon span:nth-child(2){
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, #2196f3);
+}
+
+#neon:hover span:nth-child(2){
+	top: 100%;
+	transition: 0.7s;
+	transition-delay: 0.3s;
+}
+
+#neon span:nth-child(4){
+	top: 100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg, transparent, #2196f3);
+}
+
+#neon:hover span:nth-child(4){
+	top: -100%;
+	transition: 0.7s;
+	transition-delay: 0.5s;
+}
+
+#neon strong{
+  color: rgb(170, 170, 170);
+  font-family: monospace;
+  margin: 2px;
+  padding: 1px;
+  animation: ease-in-out;
+
+}
+
+#neon strong:hover{
+    font-family: cursive;
+    color: white;
+    margin: 5px;
+    padding: 3px;
+    transition: 0.2s ease-in-out;
+}
+
+.active#neon strong{
+    font-family: cursive;
+    color: white;
+    margin: 5px;
+    padding: 3px;
+    transition: 0.1s ease-in-out;
+    font-size: larger;
+}
+
+.active i{
+  color: black;
+}
+
+
+/*                          STYLE FOR NavBar COMPONENT                             */
+
+
+.personal-contact{
+  margin-top: 100vh;
+}
+
+
+
+/*                    STYLE FOR ABOUT COMPONENT                                */
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  #portfolio_heading {
+    animation: object-move infinite 1s alternate-reverse;
+  }
+}
+
+@keyframes object-move {
+  from {
+    transform: translateY(1%);
+    transform: translateX(5%);
+  }
+  to {
+    transform: translateY(5%);
+    transform: translateX(1%);
+  }
+}
+
+#heading_span{
+    color: aqua;
+}
+
+
+.contact_link#neon{
+  padding: 10px 15px;
+  font-size: 30px;
+  font-family: monospace;
+  border: 1px solid grey;
+}
+
+.contact_link#neon:hover{
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer
+}
+
+/*                    STYLE FOR ABOUT COMPONENT                                */
+
+
+
+/*                          CODE FOR FORM                         */ 
+
+.form{
+  margin: 10px;
+	position: relative;
+	height: auto;
+  overflow: hidden;
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+  padding: 20px;
+  border-radius: 1%;
+}
+
+legend{
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+}
+
+.form input{
+	width: 100%;
+  height: 100%;
+	color: white;
+	padding-top: 10px;
+	border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.form label{
+	position: relative;
+	bottom: 0px;
+	left: 0%;
+	height: 100%;
+	width: 100%;
+	pointer-events: none;
+  border-bottom: 1px solid grey;
+  color: grey;
+}
+
+.form label::after{
+	content: "";
+	position: absolute;
+	left: 0px;
+	bottom: -1px;
+	height: 100%;
+	width: 100%;
+	border-bottom: 3px solid white;
+	transform: translateX(-100%);
+	transition: transform 0.3s ease;
+}
+
+.content-name{
+	position: absolute;
+	bottom: 5px;
+	left: 0px;
+	transition: all 0.3s ease;
+}
+
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name{
+	transform: translateY(-150%);
+	font-size: 14px;
+	color: white;
+}
+
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after{
+	transform: translateX(0%);
+}
+
+#contact{
+  margin-top: 20vh;
+  min-height: 100vh;
+  height: auto;
+}
+
+/*                          CODE FOR FORM                         */
+
+
+
+
+
+/*                  CODE FOR SKILLS CARD             */
+
+
+.front-heading{
+  background-color: black;
+	color: white;
+	position: relative;
+	text-decoration: overline;
+	font-family: monospace;
+}
+#text{
+  color: crimson;
+  transition: 0.3s ease-in-out;
+}
+#text:hover{
+  color: white;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
+  font-size: larger;
+  padding: 10px;
+  background-color: crimson;
+}
+.middle{
+  position: relative;
+  text-align: center;
+}
+.card{
+	cursor: pointer;
+	width: 340px;
+  height: 480px;
+}
+.card.middle{
+  border: none;
+  border-bottom: 5px solid cadetblue;
+  border-top: 5px solid cadetblue;
+  background: none;
+  width: 100%;
+}
+.front, .back{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	backface-visibility: hidden;
+	position: absolute; 
+	transition: transform .6s linear;
+  text-align: center;
+}
+.front img{
+  height: 100%;
+  width:100%;
+}
+.front{
+  transform: perspective(600px) rotateY(0deg);
+}
+.back{
+	background: white;
+  transform: perspective(600px) rotateY(180deg);
+}
+.back-content{
+	color: #2c3e50;
+  width: 100%;
+}
+.sm{
+  margin: 20px 0;
+}
+.sm a{
+	display: inline-flex;
+	width: 40px;
+	height: 40px;
+	justify-content: center;
+	align-items: center;
+	color: #2c3e50;
+	font-size: 20px;
+	transition: 0.4s;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.sm i{
+	color: purple;
+  margin-top: 10%;
+}
+.sm a:hover{
+	background: purple;
+}
+.sm a:hover > i{
+  color: white;
+}
+				/*---CARD HOVER EFFECT USING CSS---*/
+
+.card:hover > .front{
+	transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back{
+	transform: perspective(600px) rotateY(0deg);	
+}
+
+
+
+
+/*                  CODE FOR SKILLS CARD             */

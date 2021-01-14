@@ -1,0 +1,124 @@
+.main{
+    min-height: 100vh;
+    padding:30vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+.loader{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+	align-items: flex-end;
+    transform: translateY(-35px);
+}
+
+.loader span{
+	width: 20px;
+	height: 20px;
+	background: white;
+	margin: 0 10px;
+	height: calc(20px * var(--i));
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	animation: animate 2s linear infinite;
+	animation-delay: calc(0.25s * var(--i));
+}
+
+@keyframes animate{
+	0%{
+		background: white;
+		filter: opacity(1);
+		box-shadow: 0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216);
+	}
+
+	25%, 75%{
+		background: rgb(33,45,216);
+		filter: opacity(1);
+		box-shadow: 0 0 10 rgb(33, 45, 216),
+					0 0 40 rgb(33, 45, 216),
+					0 0 70 rgb(33, 45, 216),
+					0 0 100 rgb(33, 45, 216),
+					0 0 150 rgb(33, 45, 216),
+					0 0 200 rgb(33, 45, 216),
+					0 0 250 rgb(33, 45, 216),
+					0 0 300 rgb(33, 45, 216);
+					text-transform: uppercase;
+	}
+
+	100%{
+		background: red;
+		filter: opacity(1);
+		box-shadow: 0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216);
+	}
+}
+
+.loader span i{
+	display: block;
+	font-style: normal;
+	color: white;
+	font-size: 50px;
+	font-weight: bold;
+	transform: translateY(70px);
+	animation: animate2 2s linear infinite;
+	animation-delay: calc(0.25s * var(--i)) 
+}
+
+@keyframes animate2{
+	0%{
+		color: white;
+		filter: opacity(1);
+		text-shadow: 0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216);
+	}
+	
+	25%, 75%{
+		color: rgb(33,45,216);
+		filter: opacity(1);
+		text-shadow: 0 0 10 rgb(33, 45, 216),
+					0 0 40 rgb(33, 45, 216),
+					0 0 70 rgb(33, 45, 216),
+					0 0 100 rgb(33, 45, 216),
+					0 0 150 rgb(33, 45, 216),
+					0 0 200 rgb(33, 45, 216),
+					0 0 250 rgb(33, 45, 216),
+					0 0 300 rgb(33, 45, 216);
+	}
+
+	100%{
+		color: red;
+		filter: opacity(0);
+
+		text-shadow: 0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216),
+					0 0 0 rgb(33, 45, 216);
+	}
+}
